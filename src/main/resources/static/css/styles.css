@@ -2,17 +2,38 @@ body {
     font-family: Poppins, sans-serif;
 }
 
+.sidebar {
+    background: rgba(14,80,152,1);
+    text-align: center;
+    margin: 0;
+}
+
 header {
+    background: radial-gradient(circle, rgba(23,186,83,1) 0%, rgba(14,80,152,1) 100%);
     margin: 0;
     padding: 0;
 }
-
-  table th {
-    text-align: right;
-  }
 
 footer {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    background: radial-gradient(circle, rgba(23,186,83,1) 0%, rgba(14,80,152,1) 100%);
+}
+
+button a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on focus*/
+button a:active {
+    background-color: rgba(23, 186, 83, 1);
+    color: black;
+}
+
+.zebra:nth-child(even) {
+    background-color: #E7EDF9;
 }

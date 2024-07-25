@@ -40,10 +40,11 @@ public class ImmunizationController {
     public String saveShot(@ModelAttribute @Valid Immunization newShot, Errors errors, Model model) {
 
         if (errors.hasErrors()) {
+            model.addAttribute("message", "There is a problem with your information. Please double check all entries.");
             return "immunization/add";
         } else {
             shotRepository.save(newShot);
-            return "immunization/view";
+            return "redirect:/immunization/view";
         }
     }
 
@@ -56,7 +57,7 @@ public class ImmunizationController {
 
         shotRepository.save(newShot);
         model.addAttribute("message", "Save successful.");
-        return "/immunization/add";
+        return "redirect:/immunization/add";
     }
 
 //    get edit - TODO fix later
